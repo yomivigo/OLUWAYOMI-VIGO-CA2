@@ -1,0 +1,675 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portfolio Website</title>
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<style>
+/* Custom styles */
+.navbar {
+  background-color: transparent; /* Transparent navbar */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  color: #fff; /* White text */
+}
+
+.navbar-nav .nav-link {
+  color: #fff !important; /* White text */
+}
+
+.navbar-toggler {
+  border-color: #fff; /* White border */
+}
+
+.navbar-toggler-icon {
+  background-color: #fff; /* White background for toggler icon */
+}
+
+.navbar-collapse {
+  justify-content: flex-end; /* Align links to the right */
+}
+
+.navbar-collapse ul {
+  margin: 0;
+}
+
+.navbar-collapse li {
+  margin-left: 20px; /* Space between nav items */
+}
+
+.container-video {
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white background */
+  padding: 50px 20px; /* Padding for content inside the container */
+}
+
+.video-container {
+  position: relative;
+  width: 100%;
+  padding-bottom: 56.25%; /* Aspect ratio (16:9) */
+  overflow: hidden;
+  background-color: #000; /* Fallback black background */
+}
+
+.video-container iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+</style>
+</head>
+<body>
+
+<!-- Navigation -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <div class="container">
+        <a class="navbar-brand" href="#">OLUWAYOMI VIGO PORTFOLIO WEBSITE</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                <li class="nav-item"><a class="nav-link" href="#works">Works</a></li>
+                <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<!-- Video Section -->
+<section id="video" class="container-video">
+    <div class="video-container">
+        <!-- Embedded video -->
+        <!-- Replace the URL with your own video URL -->
+        <iframe src="https://www.youtube.com/embed/5zYkxXBgtEk?si=eGdo9PW73_n2W38p" frameborder="0" allowfullscreen></iframe>
+    </div>
+</section>
+
+<!-- Bootstrap JS and jQuery (for Bootstrap functionality) -->
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
+
+
+   <!-- Hero Section -->
+<section class="hero">
+    <div class="hero-overlay">
+        <div class="container">
+            <div class="hero-content">
+                <h1 style="text-align: center;">OLUWAYOMI VIGO</h1>
+                <p class="lead" style="text-align: center;">VIDEO CREATOR | VISUAL DESIGNER</p>
+                <style>
+                    /* Style for the button */
+                    .button {
+                      display: block;
+                      margin: auto;
+                      padding: 10px 20px;
+                      background-color: #007bff; /* Default color */
+                      color: #fff;
+                      border: none;
+                      border-radius: 5px;
+                      cursor: pointer;
+                      transition: background-color 0.3s;
+                    }
+                    
+                    /* Hover effect */
+                    .button:hover {
+                      background-color: #28a745; /* Green color on hover */
+                    }
+                    </style>
+                    </head>
+                    <body>
+                    
+                    <!-- Button with onclick attribute -->
+                    <button class="button" onclick="scrollToProjects()">View My Work</button>
+                    
+                    <script>
+                    // JavaScript function to scroll to projects section
+                    function scrollToProjects() {
+                      // Replace 'projects' with the id of the projects section
+                      document.getElementById('projects').scrollIntoView({behavior: 'smooth'});
+                    }
+                    </script>
+                    
+                    <!-- Your projects section -->
+                    <div id="projects">
+                      <!-- Your projects content goes here -->
+                    </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<style>
+    /* Global styles */
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+    }
+    
+    .section-title {
+      text-align: center;
+    }
+    
+    .row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .col-md-4 {
+      flex: 0 0 40%;
+      max-width: 40%;
+      padding: 10px;
+    }
+    
+    .col-md-8 {
+      flex: 0 0 60%;
+      max-width: 60%;
+      padding: 10px;
+    }
+    
+    .img-fluid {
+      width: 100%;
+      border-radius: 50%;
+    }
+    
+    /* Responsive styles */
+    @media screen and (max-width: 768px) {
+      .row {
+        flex-direction: column;
+      }
+    
+      .col-md-4,
+      .col-md-8 {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
+    </style>
+    </head>
+    <body>
+    
+        <style>
+            /* Custom styles */
+            #about {
+              position: relative;
+              padding: 60px 20px;
+              background: url('imgs/background.jpg') no-repeat center center/cover;
+              color: white;
+            }
+            
+            #about::before {
+              content: '';
+              position: absolute;
+              top: 0;
+              left: 0;
+              width: 100%;
+              height: 100%;
+              background: rgba(0, 0, 0, 0.5);
+              z-index: 1;
+            }
+            
+            #about .container {
+              position: relative;
+              z-index: 2;
+            }
+            
+            .section-title {
+              text-align: center;
+              font-size: 2.5em;
+              margin-bottom: 30px;
+              font-weight: bold;
+            }
+            
+            .about-img {
+              text-align: center;
+            }
+            
+            .about-img img {
+              width: 250px;
+              height: 250px;
+              border: 5px solid white;
+              object-fit: cover;
+              box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+            }
+            
+            .about-text {
+              font-size: 1.2em;
+              line-height: 1.6;
+            }
+            
+            .about-highlight {
+              color: #FFD700; /* Gold color for highlighting */
+              font-weight: bold;
+            }
+            
+            @media screen and (max-width: 768px) {
+              .section-title {
+                font-size: 2em;
+              }
+            
+              .about-img img {
+                width: 200px;
+                height: 200px;
+              }
+            
+              .about-text {
+                font-size: 1em;
+              }
+            }
+            </style>
+            </head>
+            <body>
+            
+            <!-- About Section -->
+            <section id="about">
+                <div class="container">
+                    <h2 class="section-title">About Me</h2>
+                    <div class="row align-items-center">
+                        <div class="col-md-4 about-img">
+                            <img src="imgs/1704477284001.jpg" class="img-fluid rounded-circle" alt="Your Photo">
+                        </div>
+                        <div class="col-md-8 about-text">
+                            <p>Are you looking to elevate your brand's visual presence and captivate your audience like never before? Look no further! As a passionate <span class="about-highlight">video creator</span> and <span class="about-highlight">visual designer</span>, I bring your ideas to life with creativity and finesse.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+    <style>
+        /* Global styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+          background-color: #000; /* Black background */
+          color: #fff; /* Text color */
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .section-title {
+          text-align: center;
+        }
+        
+        .row {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          align-items: center;
+        }
+        
+        .col-md-3, .col-md-4 {
+          padding: 10px;
+        }
+        
+        /* Navbar styles */
+        .navbar {
+          display: flex;
+          justify-content: center;
+          margin-bottom: 20px;
+        }
+        
+        .navbar a {
+          color: #fff;
+          text-decoration: none;
+          padding: 10px 20px;
+          margin: 0 10px;
+          border-radius: 5px;
+          background-color: rgba(255, 255, 255, 0.1); /* Transparent background */
+        }
+        
+        .navbar a:hover {
+          background-color: rgba(255, 255, 255, 0.3); /* Semi-transparent background on hover */
+        }
+        
+        /* Card styles */
+        .card {
+          background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+          margin-bottom: 20px;
+        }
+        
+        .card-img-top {
+          width: 100%;
+          height: 200px; /* Adjust height as needed */
+          object-fit: cover;
+        }
+        
+        .card-body {
+          padding: 20px;
+        }
+        
+        .card-title {
+          margin-top: 0;
+        }
+        
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+          .col-md-3, .col-md-4 {
+            flex: 0 0 100%;
+            max-width: 100%;
+          }
+        }
+        </style>
+        </head>
+        <body>
+        
+        <!-- Navbar -->
+        <nav class="navbar">
+          <a href="#skills">Skills</a>
+          <a href="#projects">Projects</a>
+        </nav>
+        
+        <!-- Skills Section -->
+        <section id="skills" class="container">
+            <h2 class="section-title">Skills</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fas fa-palette"></i>
+                        <h4>Graphic Design</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fas fa-desktop"></i>
+                        <i class="fas fa-handshake"></i>
+                        <h4>User Interface (UI) and User Experience (UX) Design</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fas fa-book-open"></i>
+                        <i class="fas fa-lightbulb"></i>
+                        <h4>Storytelling and Creativity</h4>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <div class="skill">
+                        <i class="fas fa-film"></i>
+                        <h4> Video Editing</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <style>
+            /* Custom styles */
+            .container {
+              max-width: 1200px;
+              margin: 0 auto;
+              padding: 20px;
+            }
+            
+            .section-title {
+              text-align: center;
+            }
+            
+            .works-carousel .carousel-item {
+              transition: opacity 0.3s;
+            }
+            
+            .works-carousel .carousel-item:hover {
+              opacity: 0.7;
+              cursor: pointer;
+            }
+            
+            .works-carousel .card-img-top {
+              height: 200px; /* Adjust image height */
+              object-fit: cover;
+            }
+            
+            /* Responsive styles */
+            @media screen and (max-width: 768px) {
+              .works-carousel .card-img-top {
+                height: 150px; /* Adjust image height for smaller screens */
+              }
+            }
+            </style>
+            </head>
+            <body>
+            
+            <!-- Works Section -->
+            <section id="works" class="container">
+                <h2 class="section-title">Works</h2>
+                <div id="carouselExampleControls" class="carousel slide works-carousel" data-ride="carousel">
+                    <div class="carousel-inner">
+                        <!-- First Row -->
+                        <div class="carousel-item active">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="https://www.youtube.com/" target="_blank">
+                                        <div class="card">
+                                            <img src="imgs/channels4_profile (2).jpg" class="card-img-top" alt="Project 1">
+                                            <div class="card-body">
+                                                <h5 class="card-title">HYSTAKES</h5>
+                                                <p class="card-text">First Youtube Channel.</p>
+                                                <a href="https://www.youtube.com/@hystake/featured" class="btn btn-primary" target="_blank">View on YouTube</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Add more works here -->
+                            </div>
+                        </div>
+                        <!-- Second Row -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="https://www.milanote.com/" target="_blank">
+                                        <div class="card">
+                                            <img src="imgs/marco.png" class="card-img-top" alt="Project 2">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Marco Indigo</h5>
+                                                <p class="card-text">Marco Indigo   .</p>
+                                                <a href="https://app.milanote.com/1PDxcj1IrGCy0I/oluwayomi-v-week-4" class="btn btn-primary" target="_blank">View on Milanote</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Add more works here -->
+                            </div>
+                        </div>
+                        <!-- Third Row -->
+                        <div class="carousel-item">
+                            <div class="row">
+                                <div class="col-md-4">
+                                    <a href="#">
+                                        <div class="card">
+                                            <img src="project3.jpg" class="card-img-top" alt="Project 3">
+                                            <div class="card-body">
+                                                <h5 class="card-title">Project 3</h5>
+                                                <p class="card-text">A brief description of Project 3.</p>
+                                                <a href="#" class="btn btn-primary">View Details</a>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>
+                                <!-- Add more works here -->
+                            </div>
+                        </div>
+                        <!-- Add more rows here -->
+                    </div>
+                    <!-- Navigation Buttons -->
+                    <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Previous</span>
+                    </a>
+                    <a class="carousel-control-next" href="#carouselExampleControls" role="button" data-slide="next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                        <span class="sr-only">Next</span>
+                    </a>
+                </div>
+            </section>
+        
+        <!-- JavaScript for smooth scrolling -->
+        <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+        
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        </script>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="container">
+        <h2 class="section-title">Testimonials</h2>
+        <div id="testimonialCarousel" class="carousel slide" data-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <div class="testimonial">
+                        <p>"Oluwayomi is an amazing Editor! They delivered the project on time and exceeded our expectations."</p>
+                        <h5>- Ire</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial">
+                        <p>"Highly professional and great to work with. I would definitely hire Oluwayomi again."</p>
+                        <h5>- Tobi</h5>
+                    </div>
+                </div>
+                <div class="carousel-item">
+                    <div class="testimonial">
+                        <p>"Oluwayomi's expertise in visual designing is top-notch. They truly understand client needs."</p>
+                        <h5>- Fatima</h5>
+                    </div>
+                </div>
+            </div>
+            <a class="carousel-control-prev" href="#testimonialCarousel" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#testimonialCarousel" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="container">
+        <h2 class="section-title">Contact Me</h2>
+        <form>
+            <div class="form-group">
+                <label for="name">Name</label>
+                <input type="text" class="form-control" id="name" placeholder="Your Name">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" class="form-control" id="email" placeholder="Your Email">
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea class="form-control" id="message" rows="3" placeholder="Your Message"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+    </section>
+
+    <style>
+        /* Global styles */
+        body {
+          font-family: Arial, sans-serif;
+          margin: 0;
+          padding: 0;
+        }
+        
+        .container {
+          max-width: 1200px;
+          margin: 0 auto;
+          padding: 20px;
+        }
+        
+        .section-title {
+          text-align: center;
+          margin-bottom: 20px;
+        }
+        
+        /* Map styles */
+        .map-container {
+          position: relative;
+          overflow: hidden;
+          padding-top: 56.25%; /* Aspect ratio (height:width) */
+        }
+        
+        .map-container iframe {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 100%;
+        }
+        
+        /* Responsive styles */
+        @media screen and (max-width: 768px) {
+          .map-container {
+            padding-top: 75%; /* Adjust aspect ratio for smaller screens */
+          }
+        }
+        </style>
+        </head>
+        <body>
+        
+        <!-- Map Section -->
+        <section id="map" class="container">
+            <h2 class="section-title">Location - Manhattan, New York</h2>
+            <div class="map-container">
+                <!-- Embedded Google Maps with Manhattan, New York coordinates -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3872.294101879893!2d-73.98925548486076!3d40.7308619471626!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c2588f046ee661%3A0xa96ef512fd388fbf!2sManhattan%2C%20New%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1635943531654!5m2!1sen!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <p>&copy; 2024 VIGO. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-6">
+                    <div class="social-icons">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+</body>
+</html>
